@@ -1,6 +1,16 @@
 package dev.duzera.CadastroDeNinjas;
 
+
+import jakarta.persistence.*;
+
+// Entity transforma uma class em uma entidade do DB
+@Entity
+@Table(name = "tb_cadastro")
 public class NinjaModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
     String nome;
     String email;
     int idade;
