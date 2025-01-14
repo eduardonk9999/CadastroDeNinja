@@ -1,7 +1,10 @@
-package dev.duzera.CadastroDeNinjas;
+package dev.duzera.CadastroDeNinjas.Ninjas;
 
 
+import dev.duzera.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 // Entity transforma uma class em uma entidade do DB
 @Entity
@@ -10,11 +13,11 @@ public class NinjaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String nome;
-    String email;
-    int idade;
-
+    private Long id;
+    private String nome;
+    private String email;
+    private int idade;
+    private List<MissoesModel> missoes;
 
     public NinjaModel() {
 
