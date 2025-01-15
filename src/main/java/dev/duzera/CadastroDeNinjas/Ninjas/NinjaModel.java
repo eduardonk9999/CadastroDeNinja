@@ -17,7 +17,11 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
-    private List<MissoesModel> missoes;
+
+    // @ManyToOne um ninja tem uma unica missão
+    @ManyToOne
+    @JoinColumn(name = "missoes_id") // Aqui é a fusao das duas tabelas e com isso cria uma coluna com as duas tabelas, conectamos isso com a chave extrangeira
+    private MissoesModel missoes;
 
     public NinjaModel() {
 
