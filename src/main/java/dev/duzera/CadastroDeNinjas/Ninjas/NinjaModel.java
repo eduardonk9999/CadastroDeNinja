@@ -3,12 +3,16 @@ package dev.duzera.CadastroDeNinjas.Ninjas;
 
 import dev.duzera.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 // Entity transforma uma class em uma entidade do DB
 @Entity
 @Table(name = "tb_cadastro")
+@NoArgsConstructor // Para construtores sem argumentos
+@AllArgsConstructor // Para construtores com argumentos
 public class NinjaModel {
 
     @Id
@@ -23,38 +27,5 @@ public class NinjaModel {
     @JoinColumn(name = "missoes_id") // Aqui é a fusao das duas tabelas e com isso cria uma coluna com as duas tabelas, conectamos isso com a chave extrangeira
     private MissoesModel missoes;
 
-    public NinjaModel() {
-
-    }
-
-    public NinjaModel(String nome, String email, int idade) {
-        this.nome = nome;
-        this.email = email;
-        this.idade = idade;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
 }
 
