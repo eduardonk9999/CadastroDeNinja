@@ -3,8 +3,7 @@ package dev.duzera.CadastroDeNinjas.Ninjas;
 
 import dev.duzera.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -13,6 +12,7 @@ import java.util.List;
 @Table(name = "tb_cadastro")
 @NoArgsConstructor // Para construtores sem argumentos
 @AllArgsConstructor // Para construtores com argumentos
+@Data // Cria get e setrs
 public class NinjaModel {
 
     @Id
