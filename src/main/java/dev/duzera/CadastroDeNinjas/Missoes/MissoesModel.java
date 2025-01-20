@@ -24,4 +24,6 @@ public class MissoesModel {
     // @OneToMany uma missão pode ter varios ninjas
     @OneToMany(mappedBy = "missoes")
     private List<NinjaModel> ninja;
+
+    // aula de arquitetura
 }
