@@ -1,11 +1,9 @@
-package dev.duzera.CadastroDeNinjas.Ninjas;
+package dev.duzera.CadastroDeNinjas.Ninjas.Model;
 
 
 import dev.duzera.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.List;
 
 // Entity transforma uma class em uma entidade do DB
 @Entity

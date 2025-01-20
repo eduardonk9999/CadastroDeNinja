@@ -1,6 +1,6 @@
 package dev.duzera.CadastroDeNinjas.Missoes;
 
-import dev.duzera.CadastroDeNinjas.Ninjas.NinjaModel;
+import dev.duzera.CadastroDeNinjas.Ninjas.Model.NinjaModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
