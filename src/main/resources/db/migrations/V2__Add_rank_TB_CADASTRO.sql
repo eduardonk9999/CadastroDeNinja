@@ -1,0 +1,1 @@
+-- Migrations para adcionar a coluna de RANK na tabela de cadastro
