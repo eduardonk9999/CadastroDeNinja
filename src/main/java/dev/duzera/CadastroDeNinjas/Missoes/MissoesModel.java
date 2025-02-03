@@ -1,5 +1,6 @@
 package dev.duzera.CadastroDeNinjas.Missoes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.duzera.CadastroDeNinjas.Ninjas.Model.NinjaModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -23,6 +24,7 @@ public class MissoesModel {
 
     // @OneToMany uma missão pode ter varios ninjas
     @OneToMany(mappedBy = "missoes")
+    @JsonIgnore // Para evitrar o loop de serializacao
     private List<NinjaModel> ninja;
 
     // aula de arquitetura

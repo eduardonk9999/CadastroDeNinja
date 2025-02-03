@@ -2,11 +2,22 @@ package dev.duzera.CadastroDeNinjas.Ninjas.Controller;
 
 // Controller
 
+import dev.duzera.CadastroDeNinjas.Ninjas.Model.NinjaModel;
+import dev.duzera.CadastroDeNinjas.Ninjas.Service.NinjaService;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping
 public class NinjaController {
+
+    private NinjaService ninjaService;
+
+    // Injetando dependencia do service, para poder acessar os metodos
+    public NinjaController(NinjaService ninjaService) {
+        this.ninjaService = ninjaService;
+    }
 
     // Adc Ninja (CREATE)
     @PostMapping("/criar")
@@ -16,8 +27,8 @@ public class NinjaController {
 
     // Mosrar todos os ninjas (READ)
     @GetMapping("/todos")
-    public String mostrarTodosOsNinjas() {
-        return "Mostrar Ninja";
+    public List<NinjaModel> listarNinjas() {
+        return ninjaService.listarNinjas();
     }
 
     // Mostrar ninja por ID (CREATE)
