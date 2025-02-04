@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class NinjaService {
@@ -23,6 +24,13 @@ public class NinjaService {
     public List<NinjaModel> listarNinjas() {
         // Isso são querys, para podermos usar em nossos logicas
         return ninjaRepository.findAll();
+    }
+
+    // Listar todos os ninjas por ID
+    public NinjaModel listarNinjasPorId(Long id) {
+        // Optional, pq o ninja pode não existir
+        Optional<NinjaModel> ninjaModel = ninjaRepository.findById(id);
+        return ninjaModel.orElse(null);
     }
 
 }
