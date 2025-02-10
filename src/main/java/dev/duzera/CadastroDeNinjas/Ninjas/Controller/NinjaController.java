@@ -44,7 +44,7 @@ public class NinjaController {
         return "Alterar Ninja pro ID";
     }
 
-    //
+    // teste
     // Deletar Ninja (DELETE)
     @DeleteMapping("/deletarId")
     public String deletarNinjaPorId() {
